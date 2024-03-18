@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>CMS Blog</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CMS Blog</h1>
+    </header>
+
+    <nav>
+        <a href="/">Home 🏠</a>
+        {{#if logged_in}}
+        <a href="/dashboard">Dashboard 💼</a>
+        <button id="logout">Logout ❌</button>
+        {{else}}
+        <a href="/login">Login 🖥️</a>
+        {{/if}}
+    </nav>
+
+    <section id="content">
+        {{{ body }}}
+    </section>
+   
+    <footer>
+        <p>&copy; CMS Blog</p>
+    </footer>
+
+    <!-- Handlebars library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>   
+    {{/if}}
+</body>
+</html>
