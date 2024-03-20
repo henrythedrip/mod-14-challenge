@@ -1,11 +1,20 @@
-<h2 class="blog-post-header">Blog Posts</h2>
+<h2 class="blog-post-main-header">Blog Posts</h2>
 <div>
-    <section class="blog-post">
-        <div class="blog-post-header">
-            <h3 class="blog-post-title">Blog Post Title</h3>
-        </div>
-        <div class="blog-post-body">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, autem, beatae, commodi, doloremque, dolores, eos, expedita, facere, fugiat, impedit, in, ipsa, itaque, laborios</p>
-        </div>
-    </section>
+    {{#each posts}}
+        <section class="blog-post-preview" data-blog-id={{id}}>
+            <div class="blog-post-preview-header">
+                <h3 class="blog-post-preview-title">{{post_title}}</h3>
+            </div>
+            <div class="blog-post-preview-body">
+                <div class = "user-name">
+                    <p>{{userName}}</p>
+                </div>
+                <div class="post-date">
+                    <p>{{date}}</p>
+                </div>
+            </div>
+        </section> 
+    {{/each}}
 </div>
+
+<script src="/js/linkBlogs.js"></script>

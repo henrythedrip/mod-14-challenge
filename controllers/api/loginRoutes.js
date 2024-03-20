@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const User = require('../../models/User');
 
+// prepended with /api/login
 router.post('/', async (req, res) => {
     try {
       

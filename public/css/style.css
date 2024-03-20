@@ -1,1 +1,351 @@
-h1 {color: red}
+:root {
+    --bg-color: #c9bea7;
+    --font-color: #3b3229;
+    --font-color-pink: #e39a9a;
+}
+
+body {
+    color: var(--font-color);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    color: var(--font-color-pink);
+    background-color: var(--font-color);
+    margin-left: 5vh;
+    margin-right: 5vh;
+    padding: 2vh;
+    border-radius: 5vh;
+    padding-left: 5vh;
+}
+
+nav {
+    background-color: var(--font-color-pink);
+    color: var(--font-color);
+    margin-left: 5vh;
+    margin-right: 5vh;
+    padding: 2vh;
+    font-size: x-large;
+    text-decoration: underline;
+    border-radius: 5vh;
+    padding-left: 5vh;
+    text-decoration: none;
+}
+
+nav a {
+    background-color: var(--font-color-pink);
+    border-radius: 5vh;
+    margin: 2vh;
+    padding: 2vh;
+}
+
+nav a:visited {
+    color: var(--font-color);
+}
+
+nav a:hover {
+    color: var(--font-color-pink);
+    background-color: var(--font-color);
+    font-size: xx-large;
+    box-shadow: 15px 10px #888888;
+}
+
+nav button {
+    color: var(--font-color);
+    text-decoration: underline;
+    background-color: var(--font-color-pink);
+    border: 0px;
+    margin: 2vh;
+    padding: 2vh;
+    font-size: x-large;
+}
+
+nav button:hover {
+    color: var(--font-color-pink);
+    background-color: var(--font-color);
+    font-size: xx-large;
+    box-shadow: 15px 10px #888888;
+    border-radius: 5vh;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+.blog-post-main-header {
+    background-color: var(--font-color);
+    color: var(--font-color-pink);
+    margin-left: 5vh;
+    margin-right: 5vh;
+    padding: 2vh;
+    font-size: x-large;
+    text-decoration: none;
+    border-radius: 5vh;
+    padding-left: 5vh;
+}
+
+
+.blog-post-preview {
+    background-color: var(--font-color);
+    color: var(--bg-color);
+    margin: 5vh;
+    padding: 2vh;
+    padding-left: 5vh;
+    font-size: x-large;
+    text-decoration: none;
+    border-radius: 5vh;
+}
+
+.blog-post-preview:hover {
+    font-size: xx-large;
+    box-shadow: 15px 10px #888888;
+}
+
+
+.blog-post-preview h3 {
+    color: var(--font-color-pink);
+    text-decoration: none;
+}
+
+.single-post {
+    border-style:double solid;
+    border-color: var(--font-color);
+    font-size: xx-large;
+    padding: 5vh;
+    margin: 2vh;
+    border-radius: 5vh;
+}
+
+.single-post h2 {
+    color: var(--font-color-pink);
+    background-color: var(--font-color);
+    text-decoration: none;
+    padding: 5vh;
+    border-radius: 5vh;
+}
+
+.posted-by {
+    color: var(--font-color-pink);
+    background-color: var(--font-color);
+    text-decoration: none;
+    padding: 5vh;
+    border-radius: 5vh;
+}
+
+.single-post-comments h3 {
+    color: var(--font-color-pink);
+    padding-left: 8vh;
+    padding-right: 5vh;
+    font-size: xx-large;
+}
+
+.single-post-comments{
+    background-color: var(--font-color);
+    color: var(--bg-color);
+    padding: 5vh;
+    margin: 2vh;
+    font-size: x-large;
+    text-decoration: none;
+    border-radius: 5vh;
+}
+
+.individual-comment{
+    border-style: double solid;
+    background-color: var(--font-color-pink);
+    border-color: var(--bg-color);
+    padding: 5vh;
+    margin: 2vh;
+    border-radius: 5vh;
+    font-size: xx-large;
+    color: var(--font-color);
+}
+
+
+
+.login-section {
+    background-color: var(--font-color);
+    color: var(--bg-color);
+    padding: 5vh;
+    margin: 5vh;
+    font-size: x-large;
+    text-decoration: none;
+    border-radius: 5vh;
+}
+
+.login-section h2{
+    color: var(--font-color-pink);
+}
+
+.login-section input[type=text] {
+    border: 3px solid var(--bg-color);
+    border-radius: 5vh;
+    padding: 2vh;
+    font-size: x-large;
+    width: 30%;
+    background-color: var(--font-color-pink);
+    color: var(--font-color);
+  }
+
+  .login-section input[type=password] {
+    border: 3px solid var(--bg-color);
+    border-radius: 5vh;
+    padding: 2vh;
+    font-size: x-large;
+    width: 30%;
+    background-color: var(--font-color-pink);
+    color: var(--font-color);
+  }
+
+  .login-section button {
+    border: 3px solid var(--font-color-pink);
+    border-radius: 5vh;
+    padding: 2vh;
+    font-size: x-large;
+    width: 30%;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+  }
+
+  .login-section button:hover {
+    font-size: xx-large;
+    box-shadow: 15px 10px #000000;
+    background-color: var(--font-color-pink);
+    color: var(--font-color);
+    border-color: var(--bg-color);
+  }
+
+.create-account a {
+    background-color: var(--font-color-pink);
+    font-size: x-large;
+    border-radius: 5vh;
+    margin: 5vh;
+    padding: 2vh;
+    color: var(--font-color);
+}
+
+.create-account a:visited {
+    color: var(--font-color);
+}
+
+.create-account a:hover {
+    background-color: var(--font-color);
+    color: var(--font-color-pink);
+    font-size: xx-large;
+    box-shadow: 15px 10px #888888;
+}
+
+.create-account-drip {
+    background-color: var(--font-color);
+    color: var(--bg-color);
+    padding: 5vh;
+    margin: 5vh;
+    font-size: x-large;
+    text-decoration: none;
+    border-radius: 5vh;
+}
+
+.create-account-drip h2{
+    color: var(--font-color-pink);
+}
+
+.create-account-drip input[type=text] {
+    border: 3px solid var(--bg-color);
+    border-radius: 5vh;
+    padding: 2vh;
+    font-size: x-large;
+    width: 30%;
+    background-color: var(--font-color-pink);
+    color: var(--font-color);
+  }
+
+  .create-account-drip input[type=password] {
+    border: 3px solid var(--bg-color);
+    border-radius: 5vh;
+    padding: 2vh;
+    font-size: x-large;
+    width: 30%;
+    background-color: var(--font-color-pink);
+    color: var(--font-color);
+  }
+
+  .create-account-drip button {
+    border: 3px solid var(--font-color-pink);
+    border-radius: 5vh;
+    padding: 2vh;
+    font-size: x-large;
+    width: 30%;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+  }
+
+  .create-account-drip button:hover {
+    font-size: xx-large;
+    box-shadow: 15px 10px #000000;
+    background-color: var(--font-color-pink);
+    color: var(--font-color);
+    border-color: var(--bg-color);
+  }
+
+  .dashboard-section {
+    background-color: var(--font-color);
+    color: var(--bg-color);
+    margin: 5vh;
+    padding: 2vh;
+    padding-left: 5vh;
+    font-size: x-large;
+    text-decoration: none;
+    border-radius: 5vh;
+  }
+
+  .create-post input[type=text] {
+    border: 3px solid var(--bg-color);
+    border-radius: 5vh;
+    padding: 2vh;
+    font-size: x-large;
+    width: 30%;
+    background-color: var(--font-color-pink);
+    color: var(--font-color);
+  }
+
+  .dashboard-header {
+    background-color: var(--font-color);
+    color: var(--font-color-pink);
+    margin-left: 5vh;
+    margin-right: 5vh;
+    padding: 2vh;
+    font-size: x-large;
+    text-decoration: none;
+    border-radius: 5vh;
+    padding-left: 5vh;
+  }
+
+  .dashboard-section button {
+    border: 3px solid var(--font-color-pink);
+    border-radius: 5vh;
+    padding: 2vh;
+    font-size: x-large;
+    width: 30%;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+  }
+
+  .create-post button:hover {
+    font-size: xx-large;
+    box-shadow: 15px 10px #000000;
+    background-color: var(--font-color-pink);
+    color: var(--font-color);
+    border-color: var(--bg-color);
+  }
+
+  .delete-your-account button {
+    margin-top: 7vh;
+    margin-bottom: 5vh;
+  }
+
+  .delete-your-account-button:hover {
+    font-size: xx-large;
+    box-shadow: 15px 10px #000000;
+    background-color: red;
+    color: black;
+    border-color: var(--bg-color);
+  }
