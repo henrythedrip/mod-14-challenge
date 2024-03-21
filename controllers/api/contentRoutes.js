@@ -20,10 +20,11 @@ router.get('/users', async function (req, res) {
 // TODO: This post is not able to have the user_id in insomina but i think that it should work when we apply it to the actual website, and the user is logged in
 router.post('/posts', (req, res) => {
   const { post_title, content } = req.body;
+  console.log(req.session);
   Post.create({
       post_title: post_title,
       content: content,
-      user_id: req.session.user_id,
+      userId: req.session.user_id,
   }).then(
       newPost => { res.status(201).json(newPost) }
   ).catch((err) => {
@@ -35,11 +36,12 @@ router.post('/posts', (req, res) => {
 
 // TODO: make sure this is working
 router.post('/comments', (req, res) => {
-  const { content } = req.body;
+  const { content, postId } = req.body;
+  
   Comment.create({
       content: content,
-      user_id: req.session.user_id,
-      post_id: req.post_id,
+      userId: req.session.user_id,
+      postId: postId,
   }).then(
       newPost => { res.status(201).json(newPost) }
   ).catch((err) => {

@@ -290,14 +290,36 @@ body {
     background-color: var(--font-color);
     color: var(--bg-color);
     margin: 5vh;
-    padding: 2vh;
-    padding-left: 5vh;
+    padding: 5vh;
     font-size: x-large;
     text-decoration: none;
     border-radius: 5vh;
   }
 
+  .dashboard-single-post {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    margin: 5vh;
+    padding: 5vh;
+    border-radius: 5vh;
+  }
+
+  .dashboard-single-post:hover {
+    font-size: xx-large;
+    box-shadow: 15px 10px #000000;
+  }
+
   .create-post input[type=text] {
+    border: 3px solid var(--bg-color);
+    border-radius: 5vh;
+    padding: 2vh;
+    font-size: x-large;
+    width: 30%;
+    background-color: var(--font-color-pink);
+    color: var(--font-color);
+  }
+
+  .create-post textarea {
     border: 3px solid var(--bg-color);
     border-radius: 5vh;
     padding: 2vh;

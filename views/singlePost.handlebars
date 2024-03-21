@@ -11,7 +11,18 @@
     <div class="individual-comment">
     <p>{{content}}</p>
     <p class="individual-comment-username">Commented By: {{username}}</p>
+    <p>{{date}}</p>
     </div>
     {{/each}}
 
+{{#if logged_in}}
+    <div class="create-comment">
+        <h3>Comment On This Post:</h3>
+        <textarea name="comment-content" id="comment-content" cols="50" rows="10"></textarea>
+        <button class="create-comment-submit-button" id="submit-comment-button">Submit</button>
+    </div>
+
+    <script src="/js/comment.js"></script>
+{{/if}}
 </div>
+

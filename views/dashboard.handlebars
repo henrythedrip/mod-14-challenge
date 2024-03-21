@@ -2,16 +2,27 @@
 <div class="dashboard-section">
     <div class="existing-posts">
         <h3>Existing Posts:</h3>
+        {{#each posts}}
+        <div class = "dashboard-single-post" data-blog-id={{id}}>
+            <div class="single-post-container">
+                <p>{{post_title}}</p>
+                <p>{{content}}</p>
+                <p>{{date}}</p>
+            </div>
+            <a href="/editpost/{{id}}"><button>Edit Post</button></a>
+            <button class="delete-post-button">Delete Post</button>
+        </div>
+        {{/each}}
     </div> 
     <div class="create-post">
-        <form action="submit">
+        {{!-- <form action="submit"> --}}
         <h3>Create New Post:</h3>
         <h4>Post Title:</h4>
-        <input type="text">
+        <input type="text" id="post-title">
         <h4>Post Content:</h4>
-        <input type="text">
-        <button type="submit" class="create-post-submit-button">Submit</button>
-        </form>
+        <textarea name="post-content" id="post-content" cols="50" rows="10"></textarea>
+        <button class="create-post-submit-button" id="submit-post-button">Submit</button>
+        {{!-- </form> --}}
     </div>
     <div class="delete-your-account">
         <form action="submit">
@@ -19,3 +30,7 @@
         </form>
     </div>
 </div>
+
+<script src="/js/submitPost.js"></script>
+<script src="/js/linkBlogs.js"></script>
+<script src="/js/delete.js"></script>

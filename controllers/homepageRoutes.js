@@ -49,14 +49,37 @@ router.get('/posts/:id', async (req, res) => {
   // finally, find all comments that belong to the id of this post
   // https://stackoverflow.com/questions/46380563/get-only-datavalues-from-sequelize-orm
   // we need to add raw: true to our query options to get only the data values and not the query bs
-  let commentData = await Comment.findAll({ where: { postId:post.id }, raw: true});
+  let commentData = await Comment.findAll({
+    where: { postId:post.id },
+    include: {
+      model: User,
+      as: User.username,
 
-  
+      attributes: {
+        exclude: ['password'],
+      },
+    },
+    raw: true});
+
+  // console.log(commentData);
+
+  // console.log('comment data', commentData);
+
+  // first we get the comment data as an array of comments
+  // then we want to insert the username of each commenter into that comment object
+  // then we want to render the page with the comment data
+
+
   commentData.map(comment => {
     // console.log(comment);
     const user = User.findByPk(comment.userId, {
       attributes: { exclude:['password'] } 
     }).then((result, err) => {
+      if (err) {
+        console.log(err);
+        res.render('homepage');
+      }
+      // console.log('this should be result', result);
       const username = result.get({ plain: true }).username;
       commentData[commentData.indexOf(comment)].username = username;
     
