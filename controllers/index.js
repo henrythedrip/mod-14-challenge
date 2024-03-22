@@ -5,11 +5,14 @@ const signupRoutes = require('./signupPageRoutes');
 const dashboardRoutes = require('./dashboardPageRoutes');
 // const loginRoutes = require('./loginRoutes');
 // const logoutRoutes = require('./logoutRoutes');
+const editPostRoutes = require('./editPostRoutes');
 
 router.use('/api', apiRouter);
 router.use('/', homepageRoutes);
 router.use('/signup', signupRoutes);
 router.use('/dashboard', dashboardRoutes);
+router.use('/editpost', editPostRoutes);
+
 // router.use('/login', loginRoutes);
 // router.use('/logout', logoutRoutes);
 

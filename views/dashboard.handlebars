@@ -5,11 +5,12 @@
         {{#each posts}}
         <div class = "dashboard-single-post" data-blog-id={{id}}>
             <div class="single-post-container">
-                <p>{{post_title}}</p>
-                <p>{{content}}</p>
-                <p>{{date}}</p>
+                <p class="single-post-title">{{post_title}}</p>
+                <p class="single-post-content">{{content}}</p>
+                <p class="single-post-date">{{date}}</p>
             </div>
             <a href="/editpost/{{id}}"><button>Edit Post</button></a>
+            {{!-- <button class="edit-post-button">Edit Post</button> --}}
             <button class="delete-post-button">Delete Post</button>
         </div>
         {{/each}}
@@ -24,13 +25,14 @@
         <button class="create-post-submit-button" id="submit-post-button">Submit</button>
         {{!-- </form> --}}
     </div>
-    <div class="delete-your-account">
+    {{!-- <div class="delete-your-account">
         <form action="submit">
             <button type="submit" class="delete-your-account-button">Delete Your Account</button>
         </form>
-    </div>
+    </div> --}}
 </div>
 
 <script src="/js/submitPost.js"></script>
 <script src="/js/linkBlogs.js"></script>
 <script src="/js/delete.js"></script>
+{{!-- <script src="/js/editPost.js"></script> --}}
