@@ -4,6 +4,7 @@ const path = require('path');
 const exphbs = require('express-handlebars');
 const session = require('express-session');
 const router = require('./controllers');
+const sequelize = require('./config/connection');
 
 var express = require('express');
 var app = express();
@@ -47,7 +48,10 @@ app.use(express.static(path.join(__dirname, '/public')));
 // Creates router that knows which handler to use
 app.use(router);
 
+sequelize.sync({ force: false }).then(() => {
+  app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`);
+  })
+});
+
 // start the webserver
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
-})
