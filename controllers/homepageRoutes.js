@@ -42,7 +42,7 @@ router.get('/posts/:id', async (req, res) => {
   });
   const user = userData.get({ plain: true });
 
-  // post.username = user.username;
+  post.username = user.username;
   // console.log(user);
 
 
