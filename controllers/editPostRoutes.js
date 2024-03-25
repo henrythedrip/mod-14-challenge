@@ -11,7 +11,7 @@ router.get('/:id', (req, res) => {
         }
 
         const postData = post.get({ plain: true })
-        res.render('editpost', {
+        res.render('editPost', {
             post: postData,
             logged_in: req.session.logged_in
         })
