@@ -33,19 +33,18 @@ router.get('/login', (req, res) => {
 router.get('/posts/:id', async (req, res) => {
   // get post data based on id in req params
   let postData = await Post.findByPk(req.params.id);
-
+  const post = postData.get({ plain: true });
   // console.log(post);
 
   // then, get post author from database based on the userId field in the post data  
   let userData = await User.findByPk(post.userId, {
     attributes: { exclude: ['password'] }
   });
-
-
-  postData.username = userData.username;
-  // console.log(user);
-  const post = postData.get({ plain: true });
   const user = userData.get({ plain: true });
+
+  post.username = user.username;
+  // console.log(user);
+
 
   // finally, find all comments that belong to the id of this post
   // https://stackoverflow.com/questions/46380563/get-only-datavalues-from-sequelize-orm
