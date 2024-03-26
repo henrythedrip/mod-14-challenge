@@ -37,7 +37,7 @@ router.post('/posts', (req, res) => {
 // TODO: make sure this is working
 router.post('/comments', (req, res) => {
   const { content, postId } = req.body;
-  
+  console.log(req.session.user_id)
   Comment.create({
       content: content,
       userId: req.session.user_id,

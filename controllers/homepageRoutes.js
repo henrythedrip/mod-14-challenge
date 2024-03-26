@@ -86,6 +86,9 @@ router.get('/posts/:id', async (req, res) => {
 
     })
   })      
+
+  console.log(commentData);
+  
   res.render('singlePost', {
         post: post,
         comments: commentData,
