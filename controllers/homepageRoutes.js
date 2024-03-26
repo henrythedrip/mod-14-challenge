@@ -69,23 +69,29 @@ router.get('/posts/:id', async (req, res) => {
   // then we want to insert the username of each commenter into that comment object
   // then we want to render the page with the comment data
 
-
-  commentData.map(comment => {
-    // console.log(comment);
-    const user = User.findByPk(comment.userId, {
-      attributes: { exclude:['password'] } 
-    }).then((result, err) => {
-      if (err) {
-        console.log(err);
-        res.render('homepage');
-      }
-      // console.log('this should be result', result);
-      const username = result.get({ plain: true }).username;
-      commentData[commentData.indexOf(comment)].username = username;
+for(i=0; i<commentData.length; i++){
+  const user = await User.findByPk(commentData[i].userId, {
+    attributes: { exclude:['password'] } 
+  })
+  const username = user.get({ plain: true }).username;
+  commentData[i].username = username;
+}
+  // commentData.map(comment => {
+  //   // console.log(comment);
+  //   const user = User.findByPk(comment.userId, {
+  //     attributes: { exclude:['password'] } 
+  //   }).then((result, err) => {
+  //     if (err) {
+  //       console.log(err);
+  //       res.render('homepage');
+  //     }
+  //     // console.log('this should be result', result);
+  //     const username = result.get({ plain: true }).username;
+  //     commentData[commentData.indexOf(comment)].username = username;
     
 
-    })
-  })      
+  //   })
+  // })      
 
   console.log(commentData);
   
