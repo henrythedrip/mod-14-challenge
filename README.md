@@ -1,6 +1,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# E-commerce Back End Starter Code
+# CMS Style Blog
 
 ## [Table of Contents](#table-of-contents)
   - [Description](#description)
