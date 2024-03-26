@@ -6,7 +6,7 @@ previews.forEach(preview => {
   const postID = preview.getAttribute('data-blog-id');
   preview.addEventListener('click', (event) => {
     console.log(postID);
-    window.location = `/posts/${postID}`;
+    window.location = `./posts/${postID}`;
   });
 })
 
@@ -19,6 +19,6 @@ dashboardPosts.forEach(dashboardPost => {
   console.log(postID);
   dashboardPost.addEventListener('click', (event) => {
     // console.log(postID);
-    window.location = `/posts/${postID}`;
+    window.location = `./posts/${postID}`;
   });
 })
