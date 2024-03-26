@@ -83,13 +83,14 @@ router.get('/posts/:id', async (req, res) => {
       const username = result.get({ plain: true }).username;
       commentData[commentData.indexOf(comment)].username = username;
     
-      res.render('singlePost', {
+
+    })
+  })      
+  res.render('singlePost', {
         post: post,
         comments: commentData,
         logged_in: req.session.logged_in
       });
-    })
-  })
 })
 
 module.exports = router;
